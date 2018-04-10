@@ -15,7 +15,13 @@ All the logs are aggregated per box to reduce the number of open terminals.
 
 For this reason, every log line is prefixed with the filename it originates from, using awk.
 
-Notes:
+#### Usage
+
+```
+./multi_tailer.sh "box1 app_1 app_3" "box2 app_2"
+```
+
+#### Notes
 
 1. I would NOT recommend using anything like this in production. Use a dedicated software. That's why they exist out there.
 2. The script is not efficient as it performs multiple ssh commands to identify the logs before it actually starts tailing.
